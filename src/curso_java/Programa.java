@@ -11,7 +11,7 @@ import java.util.List;
 public class Programa {
 
 	public static void main(String[] args) throws Exception {
-		data();
+		bomDia();
 
 	}
 
@@ -153,5 +153,16 @@ public class Programa {
 //		int month = 1 + cal.get(Calendar.MONTH);
 //		System.out.println("Minutes: " + minutes);
 //		System.out.println("Month: " + month);
+	}
+	
+	public static void bomDia() {
+		System.out.println("Bom dia!");
+		
+		Date dt = new Date();
+		System.out.println(dt);
+		System.out.println("######################################################");
+		SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		System.out.println(sdf2.format(dt));
+
 	}
 }
