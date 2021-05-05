@@ -1,17 +1,17 @@
 package curso_java;
 
-import java.util.Date;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class Programa {
 
 	public static void main(String[] args) throws Exception {
 		bomDia();
+		boaTarde();
 
 	}
 
@@ -163,6 +163,27 @@ public class Programa {
 		System.out.println("######################################################");
 		SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		System.out.println(sdf2.format(dt));
+
+	}
+	
+	public static void boaTarde() {
+		System.out.println("Boa Tarde");
+		Date dt = new Date();
+
+		SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		System.out.println(sdf2.format(dt));
+
+		
+		System.out.println("######################################################");
+
+		
+		System.out.println("Acréscimo de 2 dias:");
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(dt);
+		cal.add(Calendar.DAY_OF_MONTH, 2);
+		dt = cal.getTime();
+		System.out.println(dt);
+		System.out.println("######################################################");
 
 	}
 }
