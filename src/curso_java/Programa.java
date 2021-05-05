@@ -13,11 +13,15 @@ import entities.enums.OrderStatus;
 public class Programa {
 
 	public static void main(String[] args) throws Exception {
+		dicasEnumeracao();
+		
 
+	}
+	
+	public static void dicasEnumeracao() {
 		Order order = new Order(1080, new Date(), OrderStatus.PAGAMENTOPENDENTE);
 
 		System.out.println(order);
-
 	}
 
 	public static void lista() {
