@@ -13,8 +13,10 @@ public class Program {
 			System.out.println(vect[position]);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Posição inválida");
+			e.printStackTrace();
 		} catch (InputMismatchException e) {
 			System.out.println("Erro de entrada");
+			e.printStackTrace();
 		}
 		System.out.println("Fim do programa");
 	}
